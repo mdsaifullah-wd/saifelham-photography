@@ -1,17 +1,18 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Checkout from './components/Checkout/Checkout';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
-import Banner from './components/Home/Banner/Banner';
-import Inspired from './components/Home/Inspired/Inspired';
-import Services from './components/Home/Services/Services';
+import Home from './components/Home/Home';
 
 function App() {
   return (
     <div>
       <Header></Header>
-      <Banner></Banner>
-      <Inspired></Inspired>
-      <Services></Services>
+      <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/checkout' element={<Checkout></Checkout>}></Route>
+      </Routes>
       <Footer></Footer>
     </div>
   );
