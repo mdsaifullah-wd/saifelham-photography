@@ -20,11 +20,14 @@ const Header = () => {
             <Link to={'/'}>Home</Link>
             <Link to={'/blogs'}>Blogs</Link>
             <Link to={'/about'}>About</Link>
-            {user?.email && (
+            {user?.email ? (
               <button onClick={() => signOut(auth)}>Log Out</button>
+            ) : (
+              <>
+                <Link to={'/register'}>Register</Link>
+                <Link to={'/login'}>Login</Link>
+              </>
             )}
-            {!user?.email && <Link to={'/register'}>Register</Link>}
-            {!user?.email && <Link to={'/login'}>Login</Link>}
           </nav>
         </div>
       </div>
