@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import './Register.css';
 const Register = () => {
   return (
-    <section className='register'>
+    <section className='register-login'>
+      <h2 className='form-title'>Please Register</h2>
       <form className='form-container'>
         <input type='text' name='name' placeholder='Name' required />
         <input type='email' name='email' placeholder='Email' required />

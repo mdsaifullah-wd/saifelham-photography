@@ -1,6 +1,11 @@
-.register {
+.register-login {
   padding: 3rem;
   text-align: center;
+  height: calc(100vh - 80px);
+}
+.form-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 .form-container {
   max-width: 500px;
