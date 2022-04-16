@@ -1,0 +1,31 @@
+.inspired {
+  padding: 3rem;
+  text-align: center;
+}
+.inspired-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.divider {
+  width: 5rem;
+  height: 2px;
+  background-color: #222;
+}
+
+.inspired-title p {
+  text-transform: uppercase;
+}
+.inspired-heading {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.inspired-text {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.inspired-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
