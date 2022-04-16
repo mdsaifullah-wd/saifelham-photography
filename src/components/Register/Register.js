@@ -13,17 +13,19 @@ const Register = () => {
   const [createUserWithEmailAndPassword, user, loading, errorCreateUser] =
     useCreateUserWithEmailAndPassword(auth);
   user && navigate('/');
-  errorCreateUser && setError(errorCreateUser);
+  console.log(errorCreateUser?.message);
   const handleCreateUser = (event) => {
     event.preventDefault();
     const name = inputName.current.value;
     const email = inputEmail.current.value;
     const password = inputPassword.current.value;
     const confirmPassword = inputConfirmPassword.current.value;
+    errorCreateUser.message = '';
     if (password !== confirmPassword) {
       setError("Confirm Password didn't match!");
       return;
     }
+    setError('');
     createUserWithEmailAndPassword(email, password);
   };
   return (
@@ -58,7 +60,16 @@ const Register = () => {
           placeholder='Confirm Password'
           required
         />
-        <p className='error'>{error}</p>
+        <p className='error'>
+          {error}
+          {errorCreateUser?.message
+            ? errorCreateUser.message.includes('auth/email-already-in-use')
+              ? 'Email already in use!'
+              : errorCreateUser.message.includes('auth/invalid-email')
+              ? 'Invalid Email Address!'
+              : errorCreateUser.message
+            : ''}
+        </p>
         <input type='submit' value='Register' className='btn-form' />
         <Link to={'/login'}>Already have an account?</Link>
       </form>
