@@ -1,11 +1,14 @@
 .header {
+  background-color: white;
+
+  position: sticky;
+  top: 0;
+}
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  background-color: white;
-  position: sticky;
-  top: 0;
 }
 .logo h1 {
   font-size: 1.6rem;
