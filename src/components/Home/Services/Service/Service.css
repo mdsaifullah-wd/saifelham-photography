@@ -1,0 +1,11 @@
+.service-img {
+  height: 400px;
+  overflow: hidden;
+}
+.service-img img {
+  width: 100%;
+}
+.service-price {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
