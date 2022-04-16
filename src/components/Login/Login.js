@@ -1,5 +1,9 @@
 import React, { useRef } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from 'react-firebase-hooks/auth';
+import googleLogo from '../../images/google.svg';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
@@ -11,7 +15,9 @@ const Login = () => {
   const from = location.state?.from?.pathname || '/';
   const [signInWithEmailAndPassword, user, loading, errorSignIn] =
     useSignInWithEmailAndPassword(auth);
-  user && navigate(from, { replace: true });
+  const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] =
+    useSignInWithGoogle(auth);
+  (user || userGoogle) && navigate(from, { replace: true });
   const handleSignIn = (event) => {
     event.preventDefault();
     const email = inputEmail.current.value;
@@ -48,6 +54,11 @@ const Login = () => {
         <input type='submit' value='Login' className='btn-form' />
         <Link to={'/register'}>Don't have an account?</Link>
       </form>
+
+      <button className='btn btn-google' onClick={() => signInWithGoogle()}>
+        <img src={googleLogo} alt='' />
+        Sign in with Google
+      </button>
     </section>
   );
 };

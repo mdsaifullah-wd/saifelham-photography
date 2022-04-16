@@ -1,7 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import {
+  useCreateUserWithEmailAndPassword,
+  useSignInWithGoogle,
+} from 'react-firebase-hooks/auth';
+import googleLogo from '../../images/google.svg';
 import './Register.css';
 const Register = () => {
   const inputName = useRef('');
@@ -12,7 +16,9 @@ const Register = () => {
   const [error, setError] = useState('');
   const [createUserWithEmailAndPassword, user, loading, errorCreateUser] =
     useCreateUserWithEmailAndPassword(auth);
-  user && navigate('/');
+  const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] =
+    useSignInWithGoogle(auth);
+  (user || userGoogle) && navigate('/');
   console.log(errorCreateUser?.message);
   const handleCreateUser = (event) => {
     event.preventDefault();
@@ -73,6 +79,10 @@ const Register = () => {
         <input type='submit' value='Register' className='btn-form' />
         <Link to={'/login'}>Already have an account?</Link>
       </form>
+      <button className='btn btn-google' onClick={() => signInWithGoogle()}>
+        <img src={googleLogo} alt='' />
+        Sign in with Google
+      </button>
     </section>
   );
 };

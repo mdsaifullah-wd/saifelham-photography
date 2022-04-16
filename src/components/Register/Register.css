@@ -29,4 +29,21 @@
   color: white;
   background-color: black;
   border: none;
+  cursor: pointer;
+}
+.btn-google {
+  border: solid 2px black;
+  color: black;
+  font-size: 1.2rem;
+  width: 500px;
+  height: 50px;
+  padding: 0;
+  margin: 2rem auto;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.btn-google img {
+  width: 2rem;
 }
