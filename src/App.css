@@ -3,7 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+a {
+  text-decoration: none;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
