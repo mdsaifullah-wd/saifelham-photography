@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import {
+  useAuthState,
   useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
 } from 'react-firebase-hooks/auth';
@@ -14,11 +15,16 @@ const Register = () => {
   const inputConfirmPassword = useRef('');
   const navigate = useNavigate();
   const [error, setError] = useState('');
-  const [createUserWithEmailAndPassword, user, loading, errorCreateUser] =
-    useCreateUserWithEmailAndPassword(auth);
+  const [user, loading, errorAuthState] = useAuthState(auth);
+  const [
+    createUserWithEmailAndPassword,
+    userEmailandPassword,
+    loadingEmailandPassword,
+    errorCreateUser,
+  ] = useCreateUserWithEmailAndPassword(auth);
   const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] =
     useSignInWithGoogle(auth);
-  (user || userGoogle) && navigate('/');
+  user && navigate('/');
   console.log(errorCreateUser?.message);
   const handleCreateUser = (event) => {
     event.preventDefault();

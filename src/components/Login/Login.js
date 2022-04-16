@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import {
+  useAuthState,
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from 'react-firebase-hooks/auth';
@@ -13,11 +14,16 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || '/';
-  const [signInWithEmailAndPassword, user, loading, errorSignIn] =
-    useSignInWithEmailAndPassword(auth);
+  const [user, loadingAuthState, errorAuthState] = useAuthState(auth);
+  const [
+    signInWithEmailAndPassword,
+    userEmailandPassword,
+    loading,
+    errorSignIn,
+  ] = useSignInWithEmailAndPassword(auth);
   const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] =
     useSignInWithGoogle(auth);
-  (user || userGoogle) && navigate(from, { replace: true });
+  user && navigate(from, { replace: true });
   const handleSignIn = (event) => {
     event.preventDefault();
     const email = inputEmail.current.value;
