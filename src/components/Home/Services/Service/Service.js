@@ -11,6 +11,7 @@ const Service = ({ service }) => {
       <h3>{serviceName}</h3>
       <p>{description}</p>
       <p className='service-price'>$ {price}</p>
+      <button className='btn btn-checkout'>Checkout</button>
     </div>
   );
 };
