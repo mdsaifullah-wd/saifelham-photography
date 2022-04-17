@@ -32,7 +32,6 @@ const Register = () => {
     const email = inputEmail.current.value;
     const password = inputPassword.current.value;
     const confirmPassword = inputConfirmPassword.current.value;
-    errorCreateUser.message = '';
     if (password !== confirmPassword) {
       setError("Confirm Password didn't match!");
       return;
@@ -73,8 +72,9 @@ const Register = () => {
           required
         />
         <p className='error'>
-          {error}
-          {errorCreateUser?.message
+          {error
+            ? error
+            : errorCreateUser?.message
             ? errorCreateUser.message.includes('auth/email-already-in-use')
               ? 'Email already in use!'
               : errorCreateUser.message.includes('auth/invalid-email')
