@@ -20,3 +20,26 @@
 a {
   text-decoration: none;
 }
+
+.btn {
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+.btn-large {
+  padding: 0.5rem 3rem;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.btn-transparent {
+  background-color: transparent;
+  border: solid 2px var(--secondary-color);
+  color: var(--secondary-color);
+}
+.btn-transparent:hover {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+}
