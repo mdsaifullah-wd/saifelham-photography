@@ -1,22 +1,31 @@
+.service-card {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 0.5rem 0.5rem 1rem;
+  color: var(--dark-color);
+}
 .service-img {
-  height: 400px;
+  height: 220px;
   overflow: hidden;
 }
 .service-img img {
   width: 100%;
 }
-.service-price {
-  font-size: 1.5rem;
-  font-weight: 500;
+.service-title {
+  margin: 0.5rem 0 0.75rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
 }
-.btn-checkout {
-  border: solid 2px black;
-  padding: 0.5rem 1rem;
-  color: black;
+.service-description {
   font-size: 1rem;
-  margin-top: 1rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  text-align: left;
 }
-.btn-checkout:hover {
-  background-color: black;
-  color: white;
+.service-price {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
 }

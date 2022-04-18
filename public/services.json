@@ -2,22 +2,22 @@
   {
     "id": 1,
     "serviceName": "Photo Sessions",
-    "description": "You can hire me for capturing your personal photos for your need. I will capture formal, casual photos based on your needs.",
-    "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
-    "price": 100
+    "description": "Want some cool photographs of yourself or with family? Or May be you are looking for a professional photographer to capture some formal photographs! Checkout this service.",
+    "img": "https://images.unsplash.com/photo-1496852010445-f97b2eaeca4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    "price": "200/hour"
   },
   {
     "id": 2,
     "serviceName": "Weddings",
-    "description": "You can hire me for capturing your personal photos for your need. I will capture formal, casual photos based on your needs.",
-    "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
-    "price": 150
+    "description": "Choosing weeding photography style is tricky. You may go with the traditional route Or perhaps you’re more of an artistic one. I will help you to get both.",
+    "img": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80",
+    "price": "800/day"
   },
   {
     "id": 3,
     "serviceName": "Occasions",
-    "description": "You can hire me for capturing your personal photos for your need. I will capture formal, casual photos based on your needs.",
-    "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
-    "price": 200
+    "description": "Are you looking for a photographer for your event where the quantity of photographs is huge. Here I am. You can get thousands plus photographs",
+    "img": "https://img.freepik.com/free-photo/front-view-friends-celebrating-new-year-s-eve-party_23-2148724218.jpg?t=st=1650288871~exp=1650289471~hmac=23688b97c814b8ab1efef9fa5e0f8d6e0a1e8e5e616c32f6271374521211055c&w=740",
+    "price": "1200/event"
   }
 ]

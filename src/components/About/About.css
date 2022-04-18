@@ -7,18 +7,11 @@
   text-transform: uppercase;
   text-align: center;
 }
-.bottom-line {
-  background: #444;
-  width: 6rem;
-  height: 2px;
-  margin: 0 auto 1rem auto;
-}
 .about-subtitle {
   font-size: 1.3rem;
   margin-bottom: 2rem;
   text-align: center;
 }
-
 .about-me {
   display: grid;
   grid-template-columns: 3fr 5fr;

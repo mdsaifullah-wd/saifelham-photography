@@ -25,14 +25,15 @@ a {
   border-radius: 5px;
   cursor: pointer;
 }
-.btn:hover {
-  background-color: white;
-  color: black;
-}
+
 .btn-large {
   padding: 0.5rem 3rem;
   font-size: 2rem;
   margin-top: 2rem;
+}
+.btn-medium {
+  padding: 0.5rem 2rem;
+  font-size: 1.3rem;
 }
 .btn-transparent {
   background-color: transparent;
@@ -42,4 +43,28 @@ a {
 .btn-transparent:hover {
   background-color: var(--secondary-color);
   color: var(--light-color);
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  border: solid 2px var(--primary-color);
+  color: var(--light-color);
+}
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border: solid 2px var(--secondary-color);
+  color: var(--light-color);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+}
+.bottom-line {
+  background: #444;
+  width: 6rem;
+  height: 2px;
+  margin: 0 auto 1rem auto;
 }

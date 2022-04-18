@@ -6,16 +6,16 @@ const Service = ({ service }) => {
   const navigate = useNavigate();
   const { serviceName, img, description, price } = service;
   return (
-    <div>
+    <div className='service-card'>
       <div className='service-img'>
         <img src={img} alt='' />
       </div>
-      <h3>{serviceName}</h3>
-      <p>{description}</p>
+      <h3 className='service-title'>{serviceName}</h3>
+      <p className='service-description'>{description}</p>
       <p className='service-price'>$ {price}</p>
       <button
         onClick={() => navigate('/checkout')}
-        className='btn btn-checkout'>
+        className='btn btn-primary btn-medium'>
         Checkout
       </button>
     </div>
