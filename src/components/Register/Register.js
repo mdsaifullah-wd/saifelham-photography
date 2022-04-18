@@ -41,7 +41,7 @@ const Register = () => {
   };
   return (
     <section className='register-login'>
-      <h2 className='form-title'>Please Register</h2>
+      <h2 className='section-title'>Please Register</h2>
       <form className='form-container' onSubmit={handleCreateUser}>
         <input
           ref={inputName}
@@ -82,13 +82,17 @@ const Register = () => {
               : errorCreateUser.message
             : ''}
         </p>
-        <input type='submit' value='Register' className='btn-form' />
+        <input type='submit' value='Register' className='btn btn-primary' />
         <Link to={'/login'}>Already have an account?</Link>
       </form>
-      <button className='btn btn-google' onClick={() => signInWithGoogle()}>
-        <img src={googleLogo} alt='' />
-        Sign in with Google
-      </button>
+      <div className='form-button-container'>
+        <button
+          className='btn btn-transparent btn-google'
+          onClick={() => signInWithGoogle()}>
+          <img src={googleLogo} alt='' />
+          Sign in with Google
+        </button>
+      </div>
     </section>
   );
 };

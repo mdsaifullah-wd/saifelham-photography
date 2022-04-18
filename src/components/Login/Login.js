@@ -32,7 +32,7 @@ const Login = () => {
   };
   return (
     <section className='register-login'>
-      <h2 className='form-title'>Please Login</h2>
+      <h2 className='section-title'>Please Login</h2>
       <form className='form-container' onSubmit={handleSignIn}>
         <input
           ref={inputEmail}
@@ -57,14 +57,18 @@ const Login = () => {
               : errorSignIn.message
             : ''}
         </p>
-        <input type='submit' value='Login' className='btn-form' />
+        <input type='submit' value='Login' className='btn btn-primary' />
         <Link to={'/register'}>Don't have an account?</Link>
       </form>
 
-      <button className='btn btn-google' onClick={() => signInWithGoogle()}>
-        <img src={googleLogo} alt='' />
-        Sign in with Google
-      </button>
+      <div className='form-button-container'>
+        <button
+          className='btn btn-transparent btn-google'
+          onClick={() => signInWithGoogle()}>
+          <img src={googleLogo} alt='' />
+          Sign in with Google
+        </button>
+      </div>
     </section>
   );
 };
