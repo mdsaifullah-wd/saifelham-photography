@@ -1,6 +1,5 @@
 import React from 'react';
 import Banner from './Banner/Banner';
-import './Home.css';
 import Inspiration from './Inspiration/Inspiration';
 import Services from './Services/Services';
 
