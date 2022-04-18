@@ -21,7 +21,7 @@ const Register = () => {
     userEmailandPassword,
     loadingEmailandPassword,
     errorCreateUser,
-  ] = useCreateUserWithEmailAndPassword(auth);
+  ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] =
     useSignInWithGoogle(auth);
   user && navigate('/');

@@ -21,7 +21,7 @@
 }
 .error {
   color: red;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 .form-button-container {
   max-width: 500px;
