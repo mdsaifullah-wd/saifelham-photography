@@ -1,5 +1,5 @@
 .page-not-found {
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
 }
 .page-not-found img {
   height: 100%;
