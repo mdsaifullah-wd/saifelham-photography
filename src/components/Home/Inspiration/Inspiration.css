@@ -1,8 +1,8 @@
-.inspired {
+.inspiration {
   padding: 3rem;
   text-align: center;
 }
-.inspired-title {
+.inspiration-title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,18 +14,18 @@
   background-color: #222;
 }
 
-.inspired-title p {
+.inspiration-title p {
   text-transform: uppercase;
 }
-.inspired-heading {
+.inspiration-heading {
   font-size: 4rem;
   margin-bottom: 1rem;
 }
-.inspired-text {
+.inspiration-text {
   max-width: 600px;
   margin: 0 auto;
 }
-.inspired-text p {
+.inspiration-text p {
   font-size: 1.2rem;
   line-height: 1.6;
 }
