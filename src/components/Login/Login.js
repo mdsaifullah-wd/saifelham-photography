@@ -117,13 +117,15 @@ const Login = () => {
       </p>
 
       {/* Toggle Registration Page and Password Reset Link */}
-      <Link to={'/register'}>Don't have an account?</Link>
-      <span className='inline-divider'>||</span>
-      <button
-        onClick={handleSendPasswordResetEmail}
-        className='forgot-password'>
-        Forgot password?
-      </button>
+      <div className='form-links'>
+        <Link to={'/register'}>Don't have an account?</Link>
+        <span className='inline-divider'>||</span>
+        <button
+          onClick={handleSendPasswordResetEmail}
+          className='forgot-password'>
+          Forgot password?
+        </button>
+      </div>
       <ToastContainer />
     </section>
   );

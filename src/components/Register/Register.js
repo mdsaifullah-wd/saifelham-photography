@@ -83,7 +83,6 @@ const Register = () => {
             : ''}
         </p>
         <input type='submit' value='Register' className='btn btn-primary' />
-        <Link to={'/login'}>Already have an account?</Link>
       </form>
       <div className='form-button-container'>
         <button
@@ -92,6 +91,9 @@ const Register = () => {
           <img src={googleLogo} alt='' />
           Sign in with Google
         </button>
+        <div className='form-links'>
+          <Link to={'/login'}>Already have an account?</Link>
+        </div>
       </div>
     </section>
   );
