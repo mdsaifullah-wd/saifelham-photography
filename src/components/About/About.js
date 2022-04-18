@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './About.css';
+import Technology from './Technology/Technology';
 
 const About = () => {
+  // Technologies State
+  const [technologies, setTechnologies] = useState([]);
+
+  // Load Technologies Data
+  useEffect(() => {
+    fetch('technologies.json')
+      .then((res) => res.json())
+      .then((data) => setTechnologies(data));
+  }, []);
+
   return (
     <section className='about'>
       <div className='container'>
@@ -31,43 +42,18 @@ const About = () => {
               I want to acquired the skills and knowledge necessary to make
               myself as a full stack web developer in the next two years.
             </p>
-            <button className='btn-cv'>Downlod CV</button>
+            <button className='btn btn-primary btn-medium'>Downlod CV</button>
           </div>
         </div>
       </div>
 
       <div className='technical-skills'>
         <div className='container'>
-          <h2 className='about-title'>Technical Skills</h2>
-          <div className='bottom-line'></div>
-          <h4>HTML</h4>
-          <div className='progress'>
-            <div style={{ width: '90%' }}></div>
-          </div>
-          <h4>CSS</h4>
-          <div className='progress'>
-            <div style={{ width: '80%' }}></div>
-          </div>
-          <h4>Javascript</h4>
-          <div className='progress'>
-            <div style={{ width: '85%' }}></div>
-          </div>
-          <h4>Bootstrap</h4>
-          <div className='progress'>
-            <div style={{ width: '90%' }}></div>
-          </div>
-          <h4>Tailwind CSS</h4>
-          <div className='progress'>
-            <div style={{ width: '95%' }}></div>
-          </div>
-          <h4>React</h4>
-          <div className='progress'>
-            <div style={{ width: '85%' }}></div>
-          </div>
-          <h4>Node JS</h4>
-          <div className='progress'>
-            <div style={{ width: '30%' }}></div>
-          </div>
+          <h2 className='section-title'>Technical Skills</h2>
+          <div className='bottom-line bottom-line-light'></div>
+          {technologies.map((technology, index) => (
+            <Technology key={index} technology={technology}></Technology>
+          ))}
         </div>
       </div>
     </section>

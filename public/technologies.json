@@ -1,0 +1,30 @@
+[
+  {
+    "name": "HTML",
+    "progress": 90
+  },
+  {
+    "name": "CSS",
+    "progress": 80
+  },
+  {
+    "name": "Javascript",
+    "progress": 85
+  },
+  {
+    "name": "Bootstrap",
+    "progress": 90
+  },
+  {
+    "name": "Tailwind CSS",
+    "progress": 95
+  },
+  {
+    "name": "React",
+    "progress": 85
+  },
+  {
+    "name": "Node JS",
+    "progress": 30
+  }
+]

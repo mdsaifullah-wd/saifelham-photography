@@ -3,8 +3,10 @@ import './Checkout.css';
 
 const Checkout = () => {
   return (
-    <section>
-      <h2>Checkout</h2>
+    <section className='checkout'>
+      <div className='container'>
+        <h2 className='text-center'>Checkout Page</h2>
+      </div>
     </section>
   );
 };
