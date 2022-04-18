@@ -1,6 +1,7 @@
 .inspiration {
   padding: 3rem;
   text-align: center;
+  color: var(--dark-color);
 }
 .inspiration-title {
   display: flex;
@@ -11,7 +12,7 @@
 .divider {
   width: 5rem;
   height: 2px;
-  background-color: #222;
+  background-color: var(--dark-color);
 }
 
 .inspiration-title p {
@@ -20,6 +21,7 @@
 .inspiration-heading {
   font-size: 4rem;
   margin-bottom: 1rem;
+  color: var(--primary-color);
 }
 .inspiration-text {
   max-width: 600px;
