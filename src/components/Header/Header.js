@@ -1,31 +1,76 @@
 import { signOut } from 'firebase/auth';
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
+import { FaBars } from 'react-icons/fa';
+import { ImCross } from 'react-icons/im';
+import CustomLink from './CustomLink/CustomLink';
 import './Header.css';
+import { Link } from 'react-router-dom';
 const Header = () => {
-  const [user, loading, error] = useAuthState(auth);
+  // Sidebar State
+  const [sidebar, setSidebar] = useState(false);
+
+  // Auth State
+  const [user] = useAuthState(auth);
+
+  // Toggle Sidebar State
+  const toggleSidebar = () => setSidebar(!sidebar);
+
   return (
     <header className='header'>
       <div className='container'>
         <div className='navbar'>
+          {/* ----------logo-------------- */}
           <div className='logo'>
             <Link to={'/'}>
-              <h1>SaifElham</h1>
+              <h1>SaifELHAM</h1>
               <small>PHOTOGRAPHY</small>
             </Link>
           </div>
-          <nav className='nav-container'>
-            <Link to={'/'}>Home</Link>
-            <Link to={'/blogs'}>Blogs</Link>
-            <Link to={'/about'}>About</Link>
+
+          {/* ----------bar icon-------------- */}
+          <div className='bars' onClick={toggleSidebar}>
+            <FaBars />
+          </div>
+
+          {/* ----------nav menu-------------- */}
+          <nav className={`nav-menu ${sidebar && 'show'}`}>
+            <span className='cross' onClick={toggleSidebar}>
+              <ImCross />
+            </span>
+
+            {/* -----nav CustomLinks------ */}
+            <CustomLink to={'/'} onClick={toggleSidebar}>
+              Home
+            </CustomLink>
+            <CustomLink to={'/blogs'} onClick={toggleSidebar}>
+              Blogs
+            </CustomLink>
+            <CustomLink to={'/about'} onClick={toggleSidebar}>
+              About
+            </CustomLink>
+
             {user?.email ? (
-              <button onClick={() => signOut(auth)}>Log Out</button>
+              <button
+                onClick={() => {
+                  signOut(auth);
+                  toggleSidebar();
+                }}
+                className='highlight'>
+                Log Out
+              </button>
             ) : (
               <>
-                <Link to={'/register'}>Register</Link>
-                <Link to={'/login'}>Login</Link>
+                <CustomLink to={'/register'} onClick={toggleSidebar}>
+                  Register
+                </CustomLink>
+                <CustomLink
+                  to={'/login'}
+                  className='highlight'
+                  onClick={toggleSidebar}>
+                  Login
+                </CustomLink>
               </>
             )}
           </nav>
