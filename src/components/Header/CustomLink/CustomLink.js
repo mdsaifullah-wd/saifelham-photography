@@ -11,6 +11,7 @@ const CustomLink = ({ children, to, ...props }) => {
         style={{
           color: match ? 'var(--secondary-color)' : 'var(--light-color)',
         }}
+        className={match && ''}
         to={to}
         {...props}>
         {children}

@@ -1,21 +1,23 @@
 import { signOut } from 'firebase/auth';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { FaBars } from 'react-icons/fa';
 import { ImCross } from 'react-icons/im';
 import CustomLink from './CustomLink/CustomLink';
 import './Header.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 const Header = () => {
-  // Sidebar State
+  // useState
   const [sidebar, setSidebar] = useState(false);
+  const location = useLocation();
 
   // Auth State
   const [user] = useAuthState(auth);
 
   // Toggle Sidebar State
   const toggleSidebar = () => setSidebar(!sidebar);
+  // Login button handler
 
   return (
     <header className='header'>
@@ -67,7 +69,7 @@ const Header = () => {
                 </CustomLink>
                 <CustomLink
                   to={'/login'}
-                  className='highlight'
+                  className={location.pathname === '/login' ? '' : 'highlight'}
                   onClick={toggleSidebar}>
                   Login
                 </CustomLink>
