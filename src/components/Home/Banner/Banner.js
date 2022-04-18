@@ -10,7 +10,7 @@ const Banner = () => {
             <div>
               <h2>Hi, I am a Photographer</h2>
               <h3>
-                I capture <span className='bold'>Moments</span>
+                Want to capture your <span className='bold'>Moments</span>?
               </h3>
               <button className='btn btn-transparent btn-large'>Hire Me</button>
             </div>
